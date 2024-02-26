@@ -21,6 +21,9 @@ def GetTransform(center, scale, rot, res):
     t[1, 1] = res / h
     t[0, 2] = res * (- center[0] / h + 0.5)
     t[1, 2] = res * (- center[1] / h + 0.5)
+
+    # t[0, 2] = res * (- center[0] / h)
+    # t[1, 2] = res * (- center[1] / h)
     
     if rot != 0:
         rot = -rot
